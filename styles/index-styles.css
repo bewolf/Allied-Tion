@@ -1,2 +1,6 @@
 ﻿body {
+    background-image: url('../images/yellow-beer-texture.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+
 }
