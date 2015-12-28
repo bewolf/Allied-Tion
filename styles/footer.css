@@ -1,2 +1,7 @@
-﻿body {
+﻿footer {
+	padding: 20px;
+}
+
+footer p span {
+	float: right;
 }
