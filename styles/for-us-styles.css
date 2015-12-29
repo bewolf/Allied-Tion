@@ -1,2 +1,13 @@
-﻿body {
+﻿body #wrapper main section ul {
+    list-style:none;
+    text-align:center;
 }
+body #wrapper main section ul li {
+    display:inline-block;
+    margin-left:2%;
+    margin-bottom:2%;
+    text-align:left;    
+}
+    body #wrapper main section ul li div p span{
+        font-weight:bold;
+    }
