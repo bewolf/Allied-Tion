@@ -1,1 +1,18 @@
-﻿
+﻿body main section {
+    padding: 20px;
+}
+
+    body main section h3 {
+        font-size: 1.2em;
+        padding-bottom: 10px;
+    }
+
+
+body #wrapper main > .container {
+    max-width: 960px;
+}
+
+body #wrapper main .container .carousel-inner > .item > img,
+body #wrapper main .container .carousel-inner > .item > a > img {
+    margin: auto;
+}
