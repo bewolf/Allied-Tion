@@ -152,6 +152,9 @@ body header {
 
             body header nav ul li:hover > a {
                 color: #FCEA00;
+                display:block;
+                width:100%;
+                text-decoration:none;
             }
 
 

@@ -10,9 +10,21 @@
 
 body #wrapper main > .container {
     max-width: 960px;
+    padding:0;
 }
 
 body #wrapper main .container .carousel-inner > .item > img,
 body #wrapper main .container .carousel-inner > .item > a > img {
     margin: auto;
+
 }
+body #wrapper section #why-choose-beer{
+    max-width:50%;
+
+}
+body #wrapper section #why-choose-beer h3{
+    font-weight:bold;
+}
+    body #wrapper section #why-choose-beer ul {
+        list-style:none;
+    }
