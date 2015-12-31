@@ -2,7 +2,7 @@
     padding: 20px;
 }
 
-    body main section h3 {
+    body main section > h3 {
         font-size: 1.2em;
         padding-bottom: 10px;
     }
@@ -10,21 +10,23 @@
 
 body #wrapper main > .container {
     max-width: 960px;
-    padding:0;
+    padding: 0;
 }
 
 body #wrapper main .container .carousel-inner > .item > img,
 body #wrapper main .container .carousel-inner > .item > a > img {
+    height: 350px;
     margin: auto;
+}
 
+body #wrapper section #why-choose-beer {
+    max-width: 50%;
 }
-body #wrapper section #why-choose-beer{
-    max-width:50%;
 
-}
-body #wrapper section #why-choose-beer h3{
-    font-weight:bold;
-}
+    body #wrapper section #why-choose-beer h3 {
+        font-weight: bold;
+    }
+
     body #wrapper section #why-choose-beer ul {
-        list-style:none;
+        list-style: none;
     }
