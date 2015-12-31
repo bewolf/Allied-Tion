@@ -8,6 +8,10 @@ body #wrapper main section ul li {
     margin-bottom:2%;
     text-align:left;    
 }
-    body #wrapper main section ul li div p span{
-        font-weight:bold;
-    }
+body #wrapper main section ul li div p span{
+    font-weight:bold;
+}
+body #wrapper main section ul li div img{
+    width: 255px;
+    height: 255px;
+}
