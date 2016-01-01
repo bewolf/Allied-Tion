@@ -18,4 +18,6 @@ body #wrapper main section ul li div p span{
 body #wrapper main section ul li div img{
     width: 255px;
     height: 255px;
+	border-radius: 15px;
+	box-shadow: 1px 1px 3px 1px grey;
 }
