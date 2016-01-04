@@ -19,5 +19,7 @@ article > header {
 }
 
 article iframe{
-    padding-left: 20%
+    padding-left: 5%;
+    width: 90%;
+    height: 420px;
 }
