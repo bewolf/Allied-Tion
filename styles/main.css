@@ -1,8 +1,9 @@
-body main section {		
+body main section,
+body main article {		
  	padding: 20px;		
  }		
  		
- body main section h3 {		
+body main section h3 {		
  	font-size: 1.2em;		
  	padding-bottom: 10px;		
- }
+}
