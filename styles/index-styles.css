@@ -19,14 +19,25 @@ body #wrapper main .container .carousel-inner > .item > a > img {
     margin: auto;
 }
 
-body #wrapper section #why-choose-beer {
-    max-width: 50%;
+body #wrapper section #left-side {
+    float: left;
 }
 
-    body #wrapper section #why-choose-beer h3 {
+body #wrapper section #left-side, body #wrapper section #right-side {
+    max-width: 48%;
+    margin: 0;
+    display: inline-block;
+    padding:15px;
+}
+
+    body #wrapper section #left-side h3, body #wrapper section #right-side h3 {
         font-weight: bold;
+        text-align: center;
+        min-height: 40px;
+        margin-bottom: 20px;
+        color:tomato;
     }
 
-    body #wrapper section #why-choose-beer ul {
+    body #wrapper section #left-side ul, body #wrapper section #right-side ul {
         list-style: none;
     }
