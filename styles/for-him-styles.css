@@ -18,7 +18,7 @@ body main article p {
 	text-align: justify;
 }
 
-body main img {
+body main .article-picture {
     max-width: 960px;
     border-radius: 150px;
     margin: 5px;
@@ -28,4 +28,35 @@ article iframe{
     padding-left: 5%;
     width: 90%;
     height: 420px;
+}
+
+.pp_social {
+	display: none;
+}
+
+body main div {
+	padding: 20px;
+	text-decoration: none;
+	text-align: center;
+}
+
+body main div p {
+	padding-top: 5px;
+	text-align: left;
+}
+
+body main div ul li {
+	display: inline-block;
+	padding:1px;
+}
+
+body main div ul li img {
+	border-radius: 50px;
+	border: solid 2px white;
+	width: 60px;
+	height: 60px;
+}
+
+body main div ul li img:hover {
+	border: solid 2px #234465;
 }
