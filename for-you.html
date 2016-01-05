@@ -36,6 +36,50 @@
                 </ul>
             </nav>
         </header>
+        <main>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Обичате ли BeerUni</legend>
+                    <div>
+                        <label for="do-you-drink" class="question">Пиете ли бира?</label>
+                        <input type="radio" name="do-you-drink">
+                        <label for="do-you-drink">Да</label>                  
+                        <input type="radio" name="do-you-drink">
+                        <label for="do-you-drink">Не</label>
+                    </div>   
+                    <div>
+                        <label for="softuni-time" class="question">А когато сте в SoftUni?</label>
+                        <input type="radio" name="softuni-time">
+                        <label for="softuni-time">Да</label>                  
+                        <input type="radio" name="softuni-time">
+                        <label for="softuni-time">Не</label>
+                    </div> 
+                    <div>
+                        <label for="svetlio" class="question">Коя е любимата ви марка бира?</label>
+                        <input type="radio" name="svetlio" checked="checked">
+                        <label for="svetlio">Светльо</label>
+                        <label for="svetlio">Друго:</label>
+                        <input type="text" name="svetlio" class="text-field">
+                    </div>  
+                    <div>
+                        <label for="kakva" class="question">Каква бира Ви се пие в момента?</label>
+                        <input type="radio" name="kakva">
+                        <label for="kakva">Студена</label>                  
+                        <input type="radio" name="kakva">
+                        <label for="kakva">Тъмна</label>
+                    </div>
+                    <div> 
+                        <label for="kolko" class="question">Да си говорим на ти?</label>
+                        <input type="radio" name="kolko">
+                        <label for="kolko">Определено</label>                  
+                        <input type="radio" name="kolko">
+                        <label for="kolko">Още бира.</label>
+                    </div> 
+                </fieldset>    
+                <button class="submit" type="submit">Send</button>
+            <button class="reset" type="reset">Clear</button>    
+            </form>
+        </main>
         <footer>
             <div>
                 Внимание прекалената консумация на бира води до желание за още.
