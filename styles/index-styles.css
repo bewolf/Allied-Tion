@@ -31,6 +31,7 @@ body #wrapper section #left-side, body #wrapper section #right-side {
     border: 3px solid #fff;
 	border-radius: 20px;
     margin-left:1%;
+    min-height:450px;
 }
 
     body #wrapper section #left-side h3, body #wrapper section #right-side h3 {
@@ -45,3 +46,11 @@ body #wrapper section #left-side, body #wrapper section #right-side {
     body #wrapper section #left-side ul, body #wrapper section #right-side ul {
         list-style: none;
     }
+@media only screen and (max-width: 768px) {
+    body #wrapper section #left-side, body #wrapper section #right-side {
+       max-width:90%;
+       margin-bottom:10px;
+       min-height:0;
+    }
+
+}
