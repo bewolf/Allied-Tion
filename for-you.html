@@ -8,6 +8,7 @@
     <link href="styles/for-you-styles.css" rel="stylesheet" />
     <link href="styles/footer.css" rel="stylesheet" />
     <link href="styles/main.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -37,48 +38,51 @@
             </nav>
         </header>
         <main>
-            <form action="#" method="post">
+            <form action="#" method="get">
                 <fieldset>
                     <legend>Обичате ли BeerUni</legend>
                     <div>
-                        <label for="do-you-drink" class="question">Пиете ли бира?</label>
-                        <input type="radio" name="do-you-drink">
-                        <label for="do-you-drink">Да</label>                  
-                        <input type="radio" name="do-you-drink">
-                        <label for="do-you-drink">Не</label>
+                        <label for="drink" class="question">Пиете ли бира?</label>
+                        <input type="radio" name="drink" value="Да">
+                        <label for="drink">Да</label>                  
+                        <input type="radio" name="drink" value="Не">
+                        <label for="drink">Не</label>
                     </div>   
                     <div>
-                        <label for="softuni-time" class="question">А когато сте в SoftUni?</label>
-                        <input type="radio" name="softuni-time">
-                        <label for="softuni-time">Да</label>                  
-                        <input type="radio" name="softuni-time">
-                        <label for="softuni-time">Не</label>
+                        <label for="softuni" class="question">А когато сте в SoftUni?</label>
+                        <input type="radio" name="softuni" value="Да">
+                        <label for="softuni">Да</label>                  
+                        <input type="radio" name="softuni" value="Не">
+                        <label for="softuni">Не</label>
                     </div> 
                     <div>
                         <label for="svetlio" class="question">Коя е любимата ви марка бира?</label>
-                        <input type="radio" name="svetlio" checked="checked">
+                        <input type="radio" name="svetlio" checked="checked" value="Светльо">
                         <label for="svetlio">Светльо</label>
                         <label for="svetlio">Друго:</label>
-                        <input type="text" name="svetlio" class="text-field">
+                        <input type="text" name="other" class="text-field">
                     </div>  
                     <div>
                         <label for="kakva" class="question">Каква бира Ви се пие в момента?</label>
-                        <input type="radio" name="kakva">
+                        <input type="radio" name="kakva" value="Студена">
                         <label for="kakva">Студена</label>                  
-                        <input type="radio" name="kakva">
+                        <input type="radio" name="kakva" value="Тъмна">
                         <label for="kakva">Тъмна</label>
                     </div>
                     <div> 
                         <label for="kolko" class="question">Да си говорим на ти?</label>
-                        <input type="radio" name="kolko">
+                        <input type="radio" name="kolko" value="Определено">
                         <label for="kolko">Определено</label>                  
-                        <input type="radio" name="kolko">
+                        <input type="radio" name="kolko" value="Още бира.">
                         <label for="kolko">Още бира.</label>
                     </div> 
                 </fieldset>    
                 <button class="submit" type="submit">Send</button>
-            <button class="reset" type="reset">Clear</button>    
+                <button class="reset" type="reset">Clear</button>    
             </form>
+            
+            <div id="bind"></div>
+            
         </main>
         <footer>
             <div>
@@ -93,5 +97,44 @@
             </p>
         </footer>
     </div>
+    <script>
+        var parts = window.location.search.substr(1).split('&');
+        var get = '';
+               
+        for (var i = 0; i < parts.length; i++)
+        {
+            var temp = parts[i].split('=');
+            var key = decodeURIComponent(temp[0]);
+            var val = decodeURIComponent(temp[1]);
+            
+            if(key != false && val != '' && key != 'false')
+            {
+                var keyMapObj = {
+                    drink:"Пиете ли?",
+                    softuni:"А когато сте в SoftUni?",
+                    svetlio:"Любимата ви марка бира е:",
+                    kakva:"В момента ви се пие бира, която е:",
+                    kolko:"Искате да си говорим на ти?",
+                    other:"Обичате също и:"
+                };
+
+                key = key.replace(/drink|softuni|svetlio|kakva|kolko|other/gi, function(matched){
+                  return keyMapObj[matched];
+                });
+
+                val = val.replace('+', ' ');
+                get += '<div>' + key + '  <b>' + val + '</b></div>';
+            }
+        }
+        
+        if(get != '')
+        {
+            $("#bind").html("<article><h2>Резултати</h2>"+get+"</article>");
+            
+            $(".reset").click(function() {
+                $("#bind").empty();
+            });
+        }
+    </script>
 </body>
 </html>

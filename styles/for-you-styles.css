@@ -76,3 +76,18 @@ float: right;
 	color: white;
 	cursor: pointer;
 }
+
+article {
+	padding: 30px;
+	border: 3px solid #fff;
+	border-radius: 20px;
+	margin: 30px;
+}
+article div{
+    margin: 10px;
+    font-size: 20px;
+}
+article h2{
+    text-align: center;
+    font-size: 30px;
+}

@@ -23,3 +23,9 @@ body main img {
     border-radius: 150px;
     margin: 5px;
 }
+
+article iframe{
+    padding-left: 5%;
+    width: 90%;
+    height: 420px;
+}
