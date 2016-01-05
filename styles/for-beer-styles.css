@@ -11,8 +11,8 @@ article {
 	margin: 10px 0px;
 }
 
-article > header {
-	font-size: 1.2em;
+article > h2 {
+	font-size: 1.6em;
 	font-weight: bold;
 	padding: 10px 0px;
 	text-align: center;

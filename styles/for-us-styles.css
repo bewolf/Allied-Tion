@@ -11,6 +11,7 @@ body #wrapper main section ul li {
     body #wrapper main section ul li div h4 {
         text-align:center;
         margin:10px 0;
+        color:tomato;
     }
 body #wrapper main section ul li div p span{
     font-weight:bold;

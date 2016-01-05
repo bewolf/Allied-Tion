@@ -28,14 +28,18 @@ body #wrapper section #left-side, body #wrapper section #right-side {
     margin: 0;
     display: inline-block;
     padding:15px;
+    border: 3px solid #fff;
+	border-radius: 20px;
+    margin-left:1%;
 }
 
     body #wrapper section #left-side h3, body #wrapper section #right-side h3 {
         font-weight: bold;
         text-align: center;
         min-height: 40px;
-        margin-bottom: 20px;
         color:tomato;
+        margin:0 0 10px 0;
+
     }
 
     body #wrapper section #left-side ul, body #wrapper section #right-side ul {
