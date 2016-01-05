@@ -96,9 +96,8 @@ input, select {
 /*End Reset CSS*/
 @font-face {
     font-family: 'Drunker(sRB)';
-    src: url('../addons/Drunker(sRB).TTF') format('truetype');
+    src: url('../fonts/Drunker(sRB).TTF') format('truetype');
 }
-
 body {
     background:
     /* top, transparent black, faked with gradient */
@@ -131,7 +130,7 @@ body header {
         display: inline-block;
         opacity: 0.7;
         font-size: 3em;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font:Drunker(sRB);
         margin-top: 40px;
         margin-bottom: 40px;
     }
