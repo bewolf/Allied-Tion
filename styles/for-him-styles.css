@@ -12,3 +12,9 @@ body main div iframe {
 body main > img {
     max-width: 960px;
 }
+
+article iframe{
+    padding-left: 5%;
+    width: 90%;
+    height: 420px;
+}
