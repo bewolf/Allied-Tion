@@ -193,3 +193,6 @@ body header {
         margin: 0 0 10px 0;
     }
 }
+body, a:hover {
+	cursor: url("../images/beer2.cur"),progress !important;
+}
