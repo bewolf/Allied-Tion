@@ -21,8 +21,8 @@
         #wrapper main form fieldset legend {
             color: #000;
             font-size: 2em;
-            padding-left:10px;
-            padding-right:10px;
+            padding-left: 10px;
+            padding-right: 10px;
         }
 
         #wrapper main form fieldset div {
@@ -61,6 +61,7 @@
     margin-right: 0px;
     color: #38FC1D;
     border: 2px solid #38FC1D;
+    line-height: 100%;
 }
 
     #wrapper form .submit:hover {
@@ -74,6 +75,7 @@
     margin-left: 0px;
     color: #B50001;
     border: 2px solid #B50001;
+    line-height: 100%;
 }
 
     #wrapper form .reset:hover {
@@ -98,3 +100,24 @@ article {
         text-align: center;
         font-size: 30px;
     }
+
+@media only screen and (max-width: 800px) {
+    #wrapper main form {
+        max-width: 90%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #wrapper main form .reset, #wrapper form .submit {
+        float: none;
+    }
+
+    #wrapper main form #buttons-holder {
+        text-align: center;
+        margin: 0;
+    }
+
+    #wrapper main form {
+        margin-bottom: 0;
+    }
+}

@@ -78,8 +78,10 @@
                         <input type="radio" name="kolko" value="Още бира." id="kolko-oshte-bira">
                     </div>
                 </fieldset>
-                <button class="submit" type="submit">Send</button>
-                <button class="reset" type="reset">Clear</button>
+                <div id="buttons-holder">
+                    <button class="submit" type="submit">Send</button>
+                    <button class="reset" type="reset">Clear</button>
+                </div>
             </form>
             <div id="bind"></div>
 
@@ -109,7 +111,7 @@
             if (key != false && val != '' && key != 'false') {
                 var keyMapObj = {
                     drink: "Пиете ли?",
-                    softuni: "А когато сте в SoftUni?",
+                    softuni: "А когато сте в BeerUni?",
                     svetlio: "Любимата ви марка бира е:",
                     kakva: "В момента ви се пие бира, която е:",
                     kolko: "Искате да си говорим на ти?",
