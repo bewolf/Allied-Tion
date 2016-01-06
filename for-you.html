@@ -103,12 +103,14 @@
         var parts = window.location.search.substr(1).split('&');
         var get = '';
 
-        for (var i = 0; i < parts.length; i++) {
+        for (var i = 0; i < parts.length; i++)
+        {
             var temp = parts[i].split('=');
             var key = decodeURIComponent(temp[0]);
             var val = decodeURIComponent(temp[1]);
 
-            if (key != false && val != '' && key != 'false') {
+            if (key != false && val != '' && key != 'false')
+            {
                 var keyMapObj = {
                     drink: "Пиете ли?",
                     softuni: "А когато сте в BeerUni?",
@@ -118,7 +120,8 @@
                     other: "Обичате също и:"
                 };
 
-                key = key.replace(/drink|softuni|svetlio|kakva|kolko|other/gi, function (matched) {
+                key = key.replace(/drink|softuni|svetlio|kakva|kolko|other/gi, function (matched)
+                {
                     return keyMapObj[matched];
                 });
 
@@ -127,7 +130,8 @@
             }
         }
 
-        if (get != '') {
+        if (get !== '')
+        {
             $("#bind").html("<article><h2>Резултати</h2>" + get + "</article>");
 
             $(".reset").click(function () {
