@@ -84,6 +84,11 @@
         cursor: pointer;
     }
 
+#wrapper main #bind {
+    max-width: 75%;
+    margin: auto auto;
+}
+
 article {
     padding: 30px;
     border: 3px solid #fff;
@@ -104,6 +109,10 @@ article {
 @media only screen and (max-width: 800px) {
     #wrapper main form {
         max-width: 90%;
+    }
+
+    #wrapper main #bind {
+        max-width: 95%;
     }
 }
 
