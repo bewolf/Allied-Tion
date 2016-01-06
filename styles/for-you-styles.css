@@ -1,93 +1,100 @@
-﻿body {
+﻿@font-face {
+    font-family: Drunker;
+    src: url('../fonts/Drunker(sRB).TTF') format('truetype');
 }
 
 #wrapper main form {
-	padding: 30px;
-	
-	margin: 0 auto;
+    margin: 20px auto 60px auto;
+    max-width: 70%;
+    font-family: Drunker;
 }
 
-#wrapper main form fieldset {
-	display: block;
-	border: 3px solid #fff;
-    text-align: center;
-    border-radius: 15px;
-    vertical-align: top;
-}
+    #wrapper main form fieldset {
+        display: block;
+        border: 3px solid #fff;
+        text-align: center;
+        border-radius: 15px;
+        vertical-align: top;
+        background: rgba(255, 255, 255,0.45);
+    }
 
-#wrapper main form fieldset legend {
-	color: #000;
-	font-size: 2em;
-}
+        #wrapper main form fieldset legend {
+            color: #000;
+            font-size: 2em;
+            padding-left:10px;
+            padding-right:10px;
+        }
 
-#wrapper main form fieldset div {
-	padding: 10px;
-	border-bottom: 2px solid white;
-}
+        #wrapper main form fieldset div {
+            padding: 10px;
+            border-bottom: 2px solid white;
+        }
 
-#wrapper main form fieldset div:last-of-type {
-	border-bottom: 0px solid white;
-}
+            #wrapper main form fieldset div:last-of-type {
+                border-bottom: 0px solid white;
+            }
 
-#wrapper main form fieldset div .question {
-	width: 50%;
-	float: left;
-	font-weight: bold;
-	text-align: left;	
-}
+            #wrapper main form fieldset div .question {
+                width: 50%;
+                float: left;
+                font-weight: bold;
+                text-align: left;
+            }
 
-#wrapper main form fieldset div .text-field {
-	width: 20%;
-}
+            #wrapper main form fieldset div .text-field {
+                width: 20%;
+            }
 
 #wrapper form button {
-	display: inline-block;
-	width: 100px;
-	height: 30px;
-	font-weight: bold;
-	border-radius: 10px;
-	font-size: 20px;
-	margin: 5px;
-	background-color: rgba(255, 255, 255, 0.0);
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.0);
 }
 
 #wrapper form .submit {
-float: right;
-	margin-right: 0px;
-	color: #38FC1D;	
-	border: 2px solid #38FC1D;	
+    float: right;
+    margin-right: 0px;
+    color: #38FC1D;
+    border: 2px solid #38FC1D;
 }
 
-#wrapper form .submit:hover {
-	background-color: #23BE01;
-	color: white;
-	cursor: pointer;
-}
+    #wrapper form .submit:hover {
+        background-color: #23BE01;
+        color: white;
+        cursor: pointer;
+    }
 
 #wrapper form .reset {
-	float: right;
-	margin-left: 0px;
-	color: #B50001;
-	border: 2px solid #B50001;	
+    float: right;
+    margin-left: 0px;
+    color: #B50001;
+    border: 2px solid #B50001;
 }
 
-#wrapper form .reset:hover {
-	background-color: #B50001;
-	color: white;
-	cursor: pointer;
-}
+    #wrapper form .reset:hover {
+        background-color: #B50001;
+        color: white;
+        cursor: pointer;
+    }
 
 article {
-	padding: 30px;
-	border: 3px solid #fff;
-	border-radius: 20px;
-	margin: 30px;
+    padding: 30px;
+    border: 3px solid #fff;
+    border-radius: 20px;
+    margin: 30px;
 }
-article div{
-    margin: 10px;
-    font-size: 20px;
-}
-article h2{
-    text-align: center;
-    font-size: 30px;
-}
+
+    article div {
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    article h2 {
+        text-align: center;
+        font-size: 30px;
+    }

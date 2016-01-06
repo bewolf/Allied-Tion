@@ -9,7 +9,7 @@
     <link href="styles/footer.css" rel="stylesheet" />
     <link href="styles/main.css" rel="stylesheet" />
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -41,49 +41,48 @@
         <main>
             <form action="#" method="get">
                 <fieldset>
-                    <legend>Обичате ли BeerUni</legend>
+                    <legend>Една питанка от BeerUni</legend>
                     <div>
                         <label for="drink" class="question">Пиете ли бира?</label>
-                        <input type="radio" name="drink" value="Да">
-                        <label for="drink">Да</label>                  
-                        <input type="radio" name="drink" value="Не">
-                        <label for="drink">Не</label>
-                    </div>   
+                        <label for="drink-yes">Да</label>
+                        <input type="radio" name="drink" id="drink-yes" value="Да">
+                        <label for="drink-no">Не</label>
+                        <input type="radio" name="drink" id="drink-no" value="Не">
+                    </div>
                     <div>
-                        <label for="softuni" class="question">А когато сте в SoftUni?</label>
-                        <input type="radio" name="softuni" value="Да">
-                        <label for="softuni">Да</label>                  
-                        <input type="radio" name="softuni" value="Не">
-                        <label for="softuni">Не</label>
-                    </div> 
+                        <label for="softuni" class="question">А когато сте в BeerUni?</label>
+                        <label for="softuni-yes">Да</label>
+                        <input type="radio" name="softuni" value="Да" id="softuni-yes">
+                        <label for="softuni-no">Не</label>
+                        <input type="radio" name="softuni" value="Не" id="softuni-no">
+                    </div>
                     <div>
                         <label for="svetlio" class="question">Коя е любимата ви марка бира?</label>
-                        <input type="radio" name="svetlio" checked="checked" value="Светльо">
+                        <input type="radio" name="svetlio" checked="checked" value="Светльо" id="sveltio">
                         <label for="svetlio">Светльо</label>
-                        <label for="svetlio">Друго:</label>
-                        <input type="text" name="other" class="text-field">
-                    </div>  
+                        <label for="svetlio-drugo">Друго:</label>
+                        <input type="text" name="other" class="text-field" id="svetlio-drugo"/> 
+                    </div>
                     <div>
                         <label for="kakva" class="question">Каква бира Ви се пие в момента?</label>
-                        <input type="radio" name="kakva" value="Студена">
-                        <label for="kakva">Студена</label>                  
-                        <input type="radio" name="kakva" value="Тъмна">
-                        <label for="kakva">Тъмна</label>
+                        <label for="kakva-studena">Студена</label>
+                        <input type="radio" name="kakva" value="Студена" id="kakva-studena">
+                        <label for="kakva-tymna">Тъмна</label>
+                        <input type="radio" name="kakva" value="Тъмна" id="kakva-tymna">
                     </div>
-                    <div> 
+                    <div>
                         <label for="kolko" class="question">Да си говорим на ти?</label>
-                        <input type="radio" name="kolko" value="Определено">
-                        <label for="kolko">Определено</label>                  
-                        <input type="radio" name="kolko" value="Още бира.">
-                        <label for="kolko">Още бира.</label>
-                    </div> 
-                </fieldset>    
+                        <label for="kolko-opredeleno">Определено</label>
+                        <input type="radio" name="kolko" value="Определено" id="kolko-opredeleno">
+                        <label for="kolko-oshte-bira">Още бира.</label>
+                        <input type="radio" name="kolko" value="Още бира." id="kolko-oshte-bira">
+                    </div>
+                </fieldset>
                 <button class="submit" type="submit">Send</button>
-                <button class="reset" type="reset">Clear</button>    
+                <button class="reset" type="reset">Clear</button>
             </form>
-            
             <div id="bind"></div>
-            
+
         </main>
         <footer>
             <div>
@@ -101,38 +100,35 @@
     <script>
         var parts = window.location.search.substr(1).split('&');
         var get = '';
-               
-        for (var i = 0; i < parts.length; i++)
-        {
+
+        for (var i = 0; i < parts.length; i++) {
             var temp = parts[i].split('=');
             var key = decodeURIComponent(temp[0]);
             var val = decodeURIComponent(temp[1]);
-            
-            if(key != false && val != '' && key != 'false')
-            {
+
+            if (key != false && val != '' && key != 'false') {
                 var keyMapObj = {
-                    drink:"Пиете ли?",
-                    softuni:"А когато сте в SoftUni?",
-                    svetlio:"Любимата ви марка бира е:",
-                    kakva:"В момента ви се пие бира, която е:",
-                    kolko:"Искате да си говорим на ти?",
-                    other:"Обичате също и:"
+                    drink: "Пиете ли?",
+                    softuni: "А когато сте в SoftUni?",
+                    svetlio: "Любимата ви марка бира е:",
+                    kakva: "В момента ви се пие бира, която е:",
+                    kolko: "Искате да си говорим на ти?",
+                    other: "Обичате също и:"
                 };
 
-                key = key.replace(/drink|softuni|svetlio|kakva|kolko|other/gi, function(matched){
-                  return keyMapObj[matched];
+                key = key.replace(/drink|softuni|svetlio|kakva|kolko|other/gi, function (matched) {
+                    return keyMapObj[matched];
                 });
 
                 val = val.replace('+', ' ');
                 get += '<div>' + key + '  <b>' + val + '</b></div>';
             }
         }
-        
-        if(get != '')
-        {
-            $("#bind").html("<article><h2>Резултати</h2>"+get+"</article>");
-            
-            $(".reset").click(function() {
+
+        if (get != '') {
+            $("#bind").html("<article><h2>Резултати</h2>" + get + "</article>");
+
+            $(".reset").click(function () {
                 $("#bind").empty();
             });
         }
