@@ -2,11 +2,14 @@
     padding: 20px;
 }
 
-    body main section > h3 {
-        font-size: 1.2em;
-        padding-bottom: 10px;
-    }
+body main section > h3 {
+	font-size: 1.2em;
+	padding-bottom: 10px;
+}
 
+body #wrapper header h1 {
+	font-weight: bold;
+}
 
 body #wrapper main > .container {
     max-width: 960px;
@@ -34,18 +37,24 @@ body #wrapper section #left-side, body #wrapper section #right-side {
     min-height:450px;
 }
 
-    body #wrapper section #left-side h3, body #wrapper section #right-side h3 {
-        font-weight: bold;
-        text-align: center;
-        min-height: 40px;
-        color:tomato;
-        margin:0 0 10px 0;
+body #wrapper section #left-side h3, body #wrapper section #right-side h3 {
+	font-weight: bold;
+	text-align: center;
+	min-height: 40px;
+	color:tomato;
+	margin:0 0 10px 0;
 
-    }
+}
 
-    body #wrapper section #left-side ul, body #wrapper section #right-side ul {
-        list-style: none;
-    }
+body #wrapper section #left-side ul, body #wrapper section #right-side ul {
+	list-style: none;
+}
+
+body #wrapper section #left-side h3,
+body #wrapper section #right-side h3 {
+	text-shadow: 1px 1px 2px black;
+}
+	
 @media only screen and (max-width: 768px) {
     body #wrapper section #left-side, body #wrapper section #right-side {
        max-width:90%;
