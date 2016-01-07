@@ -22,6 +22,12 @@ body #wrapper main .container .carousel-inner > .item > a > img {
     margin: auto;
 }
 
+body #wrapper section article {
+    font-family: serif;
+    font-weight: normal;
+    font-size:  1.1em;
+}
+
 body #wrapper section #left-side {
     float: left;
 }
