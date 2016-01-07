@@ -7,7 +7,12 @@
     color: #4e4e4e;
 }
 
-    footer p span {
-        margin-top:10px;
-        display: block;
-    }
+footer p span {
+    margin-top:10px;
+    display: block;
+    cursor: pointer;
+}
+
+footer p span img {
+    cursor: pointer;
+}
