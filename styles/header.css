@@ -99,24 +99,6 @@ input, select {
     src: url('../fonts/Drunker(sRB).TTF') format('truetype');
 }
 
-body {
-    background:
-    /* top, transparent black, faked with gradient */
-    linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),
-    /* bottom, image */
-    url(../images/beer-background.jpg);
-    background-size: cover;
-}
-
-#wrapper {
-    max-width: 960px;
-    margin: 0 auto;
-    background: url("../images/beer-background.jpg") top;
-    background-size: 100vw, 100vh;
-    border-radius: 0px 0px 25px 25px;
-    color: #4e4e4e;
-}
-
 body header {
     text-align: center;
 	
